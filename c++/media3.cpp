@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#define PRECISION 1
 using namespace std;
-int main(int argc, char *argv[])
+int main()
 {
     float notas[] = {2, 3, 4, 1};
     float media = 0;
@@ -9,23 +10,41 @@ int main(int argc, char *argv[])
     {
         float aux;
         cin >> aux;
-        notas[i] *= aux / 10;
+        notas[i] *= aux;
         media += notas[i];
     }
-    if (media < 5)
+
+    media /= 10.0;
+    cout << fixed;
+
+    if (media < 5.0)
     {
-        printf("Media: %.1f\nAluno reprovado.", media);
+        cout << "Media: " << setprecision(PRECISION) << media << endl;
+        cout << "Aluno reprovado." << endl;
     }
-    else if (media < 7)
+    else if (media >= 7.0)
+    {
+        cout << "Media: " << setprecision(PRECISION) << media << endl;
+        cout << "Aluno aprovado." << endl;
+    }
+    else
     {
         float aux;
         cin >> aux;
-        media += aux / 2;
+        cout << "Media: " << setprecision(PRECISION) << media << endl;
+        cout << "Aluno em exame." << endl;
+        cout << "Nota do exame: " << setprecision(PRECISION) << aux << endl;
+        media = (media + aux) / 2.0;
         if (media >= 5)
         {
-            puts("Aluno aprovado.");
-            printf("Mdia final: %.1f")
+            cout << "Aluno aprovado." << endl;
         }
+        else
+        {
+            cout << "Aluno reprovado." << endl;
+        }
+        cout << "Media final: " << setprecision(PRECISION) << media << endl;
     }
+
     return 0;
 }

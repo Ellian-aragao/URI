@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[])
+int main()
 {
     float notas[] = {2, 3, 4, 1};
     float media = 0;
@@ -8,37 +8,39 @@ int main(int argc, char *argv[])
     {
         float aux;
         scanf("%f", &aux);
-        notas[i] *= aux / 10;
+        notas[i] *= aux;
         media += notas[i];
     }
 
-    if (media < 5)
+    media /= 10.0;
+
+    if (media < 5.0)
     {
-        printf("Media: %.1f\n",media);
-        puts("Aluno reprovado.");
+        printf("Media: %.1f\n", media);
+        printf("Aluno reprovado.\n");
     }
-    else if (media < 7)
+    else if (media >= 7.0)
     {
-        float aux;
-        scanf("%f", &aux);
-        printf("Media: %.1f\n",media);
-        puts("Aluno em exame.");
-        printf("Nota do exame: %.1f\n",aux);
-        media = (media + aux) / 2;
-        if (media >= 5)
-        {
-            puts("Aluno aprovado.");
-        }
-        else
-        {
-            puts("Aluno reprovado.");
-        }
-        printf("Media final: %.1f\n", media);
+        printf("Media: %.1f\n", media);
+        printf("Aluno aprovado.\n");
     }
     else
     {
-        printf("Media: %.1f\n",media);
-        puts("Aluno aprovado.");
+        float aux;
+        scanf("%f", &aux);
+        printf("Media: %.1f\n", media);
+        printf("Aluno em exame.\n");
+        printf("Nota do exame: %.1f\n", aux);
+        media = (media + aux) / 2.0;
+        if (media >= 5)
+        {
+            printf("Aluno aprovado.\n");
+        }
+        else
+        {
+            printf("Aluno reprovado.\n");
+        }
+        printf("Media final: %.1f\n", media);
     }
 
     return 0;
