@@ -22,7 +22,7 @@ public class media3 {
         } else if (media < 5) {
             str = String.format("%.1f", media);
             System.out.println("Media: " + str);
-            System.out.println("Aluno aprovado.");
+            System.out.println("Aluno reprovado.");
         } else {
             float aux = sc.nextFloat();
             str = String.format("%.1f", media);
