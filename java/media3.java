@@ -14,18 +14,18 @@ public class media3 {
 
         media /= 10;
 
-        if (media < 5) {
-            String str = String.format("%.1f", media);
+        String str;
+        if (media >= 7) {
+            str = String.format("%.1f", media);
             System.out.println("Media: " + str);
             System.out.println("Aluno aprovado.");
-        } else if (media >= 7) {
-            String str = String.format("%.1f", media);
+        } else if (media < 5) {
+            str = String.format("%.1f", media);
             System.out.println("Media: " + str);
             System.out.println("Aluno aprovado.");
         } else {
-            float aux;
-            aux = sc.nextFloat();
-            String str = String.format("%.1f", media);
+            float aux = sc.nextFloat();
+            str = String.format("%.1f", media);
             System.out.println("Media: " + str);
             System.out.println("Aluno em exame.");
             str = String.format("%.1f", aux);
