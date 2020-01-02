@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Main {
+public class diferenca {
     public static void main(String[] args) {
         int a , b,d,c;
         Scanner sc = new Scanner(System.in);
