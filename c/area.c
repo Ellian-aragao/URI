@@ -20,4 +20,3 @@ int main() {
     printf("RETANGULO: %.3lf\n",total);        
     return 0;
 }
-
