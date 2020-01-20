@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class areaDoCirculo {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double area = sc.nextDouble();
