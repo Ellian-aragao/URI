@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class testeDeSolucao1 {
+public class testeDeSelecao1 {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         int vet[] = new int[4];
